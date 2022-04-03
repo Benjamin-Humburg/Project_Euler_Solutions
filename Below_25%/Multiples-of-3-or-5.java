@@ -22,6 +22,7 @@ public class Solutions {
 		
 	}
 	
+	// It is important to note that this function only works for two multiples that are relatively prime.
 	public static int sumOfAUB(int multiple1, int multiple2, int belowThis) {
 		
 		int numMult1 = (int) (Math.ceil((double) belowThis / (double) multiple1) - 1);
