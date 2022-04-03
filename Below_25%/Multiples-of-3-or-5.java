@@ -25,9 +25,9 @@ public class Solutions {
 	// It is important to note that this function only works for two multiples that are relatively prime.
 	public static int sumOfAUB(int multiple1, int multiple2, int belowThis) {
 		
-		int numMult1 = (int) (Math.ceil((double) belowThis / (double) multiple1) - 1);
-		int numMult2 = (int) (Math.ceil((double) belowThis / (double) multiple2) - 1);
-		int numMultIntersection = (int) (Math.ceil((double) belowThis / ((double) multiple1 * (double) multiple2)) - 1);
+		int numMult1 = (belowThis - 1) / multiple1;
+		int numMult2 = (belowThis - 1) / multiple2;
+		int numMultIntersection = (belowThis - 1) / (multiple1 * multiple2);
 		
 		int sumOfMults1 = multiple1 * sumOfFirstNNaturals(numMult1);
 		int sumOfMults2 = multiple2 * sumOfFirstNNaturals(numMult2);
